@@ -13,15 +13,15 @@
 
     <Grid HorizontalAlignment="Stretch">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
         <WrapPanel Grid.Row="1" Margin="200,0,200,0" HorizontalAlignment="Center" 
                    VerticalAlignment="Center">
 
-            <Button Click="Settings_Click" HorizontalAlignment="Left" Margin="30,15,0,30" VerticalAlignment="Center" Height="auto">
+            <Button Click="Settings_Click" HorizontalAlignment="Left" Margin="30,15,0,30" VerticalAlignment="Center" Height="200" Width="200">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF3F3F3"/>
@@ -34,14 +34,14 @@
                 </Button.Background>
 
 
-                <StackPanel Orientation="Vertical" Height="auto">
+                <StackPanel Orientation="Vertical">
                     <Image Source="/Images/settings.png"
-                            Margin="0,0,0,0" Width="200" Height="200"/>
+                            Margin="10,10,10,10"/>
                     <Label Content="Settings" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
                 </StackPanel>
             </Button>
 
-            <Button Click="NewCase_Click" HorizontalAlignment="Left" Margin="30,15,0,30" VerticalAlignment="Center" Height="auto">
+            <Button Click="NewCase_Click" HorizontalAlignment="Left" Margin="30,15,0,30" VerticalAlignment="Center" Height="200" Width="200">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF3F3F3"/>
@@ -54,15 +54,15 @@
                 </Button.Background>
 
 
-                <StackPanel Orientation="Vertical" Height="auto">
-                    <Image Source="/Images/newCase.png"
-                            Margin="0,0,0,0" Width="200" Height="200"/>
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Images/newCase.png" Height="120"
+                            Margin="10,10,10,10"/>
                     <Label Content="New Case" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
                 </StackPanel>
             </Button>
 
             <Button Click="GoToOrdersPage" HorizontalAlignment="Left" Margin="30,15,0,30" 
-                    VerticalAlignment="Center" Height="auto" Padding="5,5,5,5">
+                    VerticalAlignment="Center" Height="200" Width="200" Padding="5,5,5,5">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF3F3F3"/>
@@ -77,13 +77,13 @@
 
                 <StackPanel Orientation="Vertical" Height="auto">
                     <Image Source="/Images/orderSomeStuff.png"
-                            Margin="0,0,0,0" Width="200" Height="200"/>
-                    <Label Content="Request an Order" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
+                            Margin="10,10,10,10" Width="120" Height="120"/>
+                    <Label Content="Order it!" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
                 </StackPanel>
             </Button>
 
             <Button Click="GoToDbToExcelSyncWindow" HorizontalAlignment="Left" Margin="30,15,0,30" 
-                    VerticalAlignment="Center" Height="auto" Padding="5,5,5,5">
+                    VerticalAlignment="Center" Height="200" Width="200" Padding="5,5,5,5">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF3F3F3"/>
@@ -98,13 +98,13 @@
 
                 <StackPanel Orientation="Vertical" Height="auto">
                     <Image Source="/Images/dbToExcel.png"
-                            Margin="0,0,0,0" Width="200" Height="200"/>
-                    <Label Content="Sync Database > Excel" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
+                            Margin="0,0,0,0" Width="150" Height="140"/>
+                    <Label Content="Sync > Excel" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
                 </StackPanel>
             </Button>
 
             <Button Click="GoToExcelToDbSyncWindow" HorizontalAlignment="Left" Margin="30,15,0,30" 
-                    VerticalAlignment="Center" Height="auto" Padding="5,5,5,5">
+                    VerticalAlignment="Center" Height="200" Width="200" Padding="5,5,5,5">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF3F3F3"/>
@@ -119,13 +119,13 @@
 
                 <StackPanel Orientation="Vertical" Height="auto">
                     <Image Source="/Images/excelToDb.png"
-                            Margin="0,0,0,0" Width="200" Height="200"/>
-                    <Label Content="Sync Excel > Database" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
+                            Margin="0,0,0,0" Width="150" Height="145"/>
+                    <Label Content="Sync > Database" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
                 </StackPanel>
             </Button>
 
             <Button Click="GoToReportsPage" HorizontalAlignment="Left" Margin="30,15,0,30" VerticalAlignment="Center" 
-                    Height="auto" Padding="5,5,5,5">
+                    Height="200" Width="200" Padding="5,5,5,5">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF3F3F3"/>
@@ -140,13 +140,13 @@
 
                 <StackPanel Orientation="Vertical" Height="auto">
                     <Image Source="/Images/statsAndReports.png"
-                            Margin="0,0,0,0" Width="200" Height="200"/>
+                            Margin="10,10,10,10" Width="200" Height="130"/>
                     <Label Content="Stats &amp; Reports" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
                 </StackPanel>
             </Button>
 
             <Button Click="ExitApplication" HorizontalAlignment="Left" Margin="30,15,0,30" 
-                    VerticalAlignment="Center" Height="auto" Padding="5,5,5,5">
+                    VerticalAlignment="Center" Height="200" Width="200" Padding="5,5,5,5">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF3F3F3"/>
@@ -161,7 +161,7 @@
 
                 <StackPanel Orientation="Vertical" Height="auto">
                     <Image Source="/Images/exit.png"
-                            Margin="0,0,0,0" Width="200" Height="200"/>
+                            Margin="10,10,10,10" Width="150" Height="130"/>
                     <Label Content="Exit Application" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
                 </StackPanel>
             </Button>

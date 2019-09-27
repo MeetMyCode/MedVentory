@@ -433,6 +433,7 @@
     <Resource Include="Images\info.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\settings.png" />
     <Content Include="Inventory.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
