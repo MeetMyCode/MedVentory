@@ -16,17 +16,6 @@
             <ColumnDefinition Width="100"/>
         </Grid.ColumnDefinitions>
 
-        <!--
-        <Grid.Background>
-            
-            <ImageBrush ImageSource="/Images/Banners/blueBanner1.png" Opacity="0.6">
-                <ImageBrush.RelativeTransform>
-                    <RotateTransform CenterX="0.5" CenterY="0.5" Angle="180" />
-                </ImageBrush.RelativeTransform>
-            </ImageBrush>
-        </Grid.Background>
--->
-
         <Grid Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,5,0,5">
             <Grid.Background>
                 <ImageBrush ImageSource="/Images/Banners/heartBeatFlatSquiggle.png"/>

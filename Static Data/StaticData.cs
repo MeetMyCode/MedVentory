@@ -55,45 +55,45 @@ namespace InterventionalCostings.Static_Data
         {
             get { return "MasterFiles"; }
         }
-        #endregion
+		#endregion
 
-        //Email Settings
-        #region
-        public static string PersonWhoDoesTheOrderingEmailAddress
-        {
-            get { return "rosshiggins@nhs.net"; }
-        }
+		//Email Settings
+		#region
+		//public static string PersonWhoDoesTheOrderingEmailAddress
+		//{
+		//	get { return Properties.mySettings.Default.OrdererEmail; }
+		//}
 
-        public static string SmtpServerAddress
-        {
-			//get { return "SEND.NHS.NET"; }
-			get {
-				string setting = Properties.Settings.Default["OrdererEmail"].ToString();
-				return Properties.Settings.Default["OrdererEmail"].ToString(); 
-			}
-        }
+		//public static string SmtpServerAddress
+		//{
+		//	//get { return "SEND.NHS.NET"; }
+		//	get
+		//	{
+		//		return Properties.mySettings.Default.SmtpServerAddress;
+		//	}
+		//}
 
-        public static int SmtpServerPortNumber
-        {
-            get { return 587; }
-        }
+		//public static int SmtpServerPortNumber
+		//{
+		//	get { return Properties.mySettings.Default.SmtpServerPortNumber; }
+		//}
 
-        public static string ImapServerAddress
-        {
-            get { return "IMAP.NHS.NET"; }
-        }
+		//public static string ImapServerAddress
+		//{
+		//	get { return Properties.mySettings.Default.ImapServerAddress; }
+		//}
 
-        public static int ImapServerPortNumber
-        {
-            get { return 993; }
-        }
-        #endregion
+		//public static int ImapServerPortNumber
+		//{
+		//	get { return Properties.mySettings.Default.ImapServerPortNumber; }
+		//}
+		#endregion
 
-        //Dictionaries (used in syncing excel files to database tables)
-        #region
-        public static List<(int, int)> BalloonTitleCellLocations = new List<(int, int)> {
+		//Dictionaries (used in syncing excel files to database tables)
+		#region
+		public static List<(int, int)> BalloonTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //Brand
+			( 1, 1 ), //Brand
             ( 1, 2 ), //Title
             ( 1, 3 ), //Diameter
             ( 1, 4 ), //Dimensions
@@ -102,9 +102,9 @@ namespace InterventionalCostings.Static_Data
             ( 1, 7 ), //Category
             ( 1, 8 ) //PackSize
         };
-        public static List<(int, int)> CatheterTitleCellLocations = new List<(int, int)> {
+		public static List<(int, int)> CatheterTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //Brand
+			( 1, 1 ), //Brand
             ( 1, 2 ), //Title
             ( 1, 3 ), //SubTitle
             ( 1, 4 ), //Diameter
@@ -114,9 +114,9 @@ namespace InterventionalCostings.Static_Data
             ( 1, 8 ), //Category
             ( 1, 9) //PackSize
         };
-        public static List<(int, int)> CoilTitleCellLocations = new List<(int, int)> {
+		public static List<(int, int)> CoilTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //Brand
+			( 1, 1 ), //Brand
             ( 1, 2 ), //Title
             ( 1, 3 ), //SubTitle
             ( 1, 4 ), //Diameter
@@ -126,9 +126,9 @@ namespace InterventionalCostings.Static_Data
             ( 1, 8 ), //Category
             ( 1, 9) //PackSize
         };
-        public static List<(int, int)> ContrastTitleCellLocations = new List<(int, int)> {
+		public static List<(int, int)> ContrastTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //Brand
+			( 1, 1 ), //Brand
             ( 1, 2 ), //Strength
             ( 1, 3 ), //Volume
             ( 1, 4 ), //Cost
@@ -136,9 +136,9 @@ namespace InterventionalCostings.Static_Data
             ( 1, 6 ), //Category
             ( 1, 7 ) //PackSize
         };
-        public static List<(int, int)> DilatorTitleCellLocations = new List<(int, int)> {
+		public static List<(int, int)> DilatorTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //Brand
+			( 1, 1 ), //Brand
             ( 1, 2 ), //Title
             ( 1, 3 ), //Diameter
             ( 1, 4 ), //Dimensions
@@ -147,18 +147,18 @@ namespace InterventionalCostings.Static_Data
             ( 1, 7 ), //Category
             ( 1, 8 ) //PackSize
         };
-        public static List<(int, int)> DressingTitleCellLocations = new List<(int, int)> {
+		public static List<(int, int)> DressingTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //Brand
+			( 1, 1 ), //Brand
             ( 1, 2 ), //Title
             ( 1, 3 ), //Cost
             ( 1, 4 ), //RefNumber
             ( 1, 5 ), //Category
             ( 1, 6 ) //PackSize
         };
-        public static List<(int, int)> EmbolisationSystemTitleCellLocations = new List<(int, int)> {
+		public static List<(int, int)> EmbolisationSystemTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //Brand
+			( 1, 1 ), //Brand
             ( 1, 2 ), //Title
             ( 1, 3 ), //SubTitle
             ( 1, 4 ), //Cost
@@ -166,9 +166,9 @@ namespace InterventionalCostings.Static_Data
             ( 1, 6 ), //Category
             ( 1, 7 ) //PackSize
         };
-        public static List<(int, int)> MiscTitleCellLocations = new List<(int, int)> {
+		public static List<(int, int)> MiscTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //Brand
+			( 1, 1 ), //Brand
             ( 1, 2 ), //Title
             ( 1, 3 ), //SubTitle
             ( 1, 4 ), //Cost
@@ -176,32 +176,32 @@ namespace InterventionalCostings.Static_Data
             ( 1, 6 ), //Category
             ( 1, 7 ) //PackSize
         };
-        public static List<(int, int)> MiscDataTitleCellLocations = new List<(int, int)> {
+		public static List<(int, int)> MiscDataTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //DbTables
+			( 1, 1 ), //DbTables
             ( 1, 2 ), //CaseLocations
             ( 1, 3 ), //ProductCategories
 
         };
-        public static List<(int, int)> RadiologistTitleCellLocations = new List<(int, int)> {
+		public static List<(int, int)> RadiologistTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //Prefix
+			( 1, 1 ), //Prefix
             ( 1, 2 ), //FirstName
             ( 1, 3 ), //Surname
             ( 1, 4 ), //Specialty
 
         };
-        public static List<(int, int)> ReferrerTitleCellLocations = new List<(int, int)> {
+		public static List<(int, int)> ReferrerTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //Prefix
+			( 1, 1 ), //Prefix
             ( 1, 2 ), //FirstName
             ( 1, 3 ), //Surname
             ( 1, 4 ), //Specialty
 
         };
-        public static List<(int, int)> SheathTitleCellLocations = new List<(int, int)> {
+		public static List<(int, int)> SheathTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //Brand
+			( 1, 1 ), //Brand
             ( 1, 2 ), //Title
             ( 1, 3 ), //Diameter
             ( 1, 4 ), //Dimensions
@@ -210,9 +210,9 @@ namespace InterventionalCostings.Static_Data
             ( 1, 7 ), //Category
             ( 1, 8 ) //PackSize
         };
-        public static List<(int, int)> StentTitleCellLocations = new List<(int, int)> {
+		public static List<(int, int)> StentTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //Brand
+			( 1, 1 ), //Brand
             ( 1, 2 ), //Title
             ( 1, 3 ), //SubTitle
             ( 1, 4 ), //Diameter
@@ -222,9 +222,9 @@ namespace InterventionalCostings.Static_Data
             ( 1, 8 ), //Category
             ( 1, 9) //PackSize
         };
-        public static List<(int, int)> WireTitleCellLocations = new List<(int, int)> {
+		public static List<(int, int)> WireTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //Brand
+			( 1, 1 ), //Brand
             ( 1, 2 ), //Title
             ( 1, 3 ), //SubTitle
             ( 1, 4 ), //Diameter
@@ -234,9 +234,9 @@ namespace InterventionalCostings.Static_Data
             ( 1, 8 ), //Category
             ( 1, 9) //PackSize
         };
-        public static List<(int, int)> SnareTitleCellLocations = new List<(int, int)> {
+		public static List<(int, int)> SnareTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //Brand
+			( 1, 1 ), //Brand
             ( 1, 2 ), //Title
             ( 1, 3 ), //SubTitle
             ( 1, 4 ), //Diameter
@@ -246,19 +246,19 @@ namespace InterventionalCostings.Static_Data
             ( 1, 8 ), //Category
             ( 1, 9) //PackSize
         };
-        public static List<(int, int)> InterventionalNursesTitleCellLocations = new List<(int, int)> {
+		public static List<(int, int)> InterventionalNursesTitleCellLocations = new List<(int, int)> {
 
-            ( 1, 1 ), //Username
+			( 1, 1 ), //Username
             ( 1, 2 ), //Email
             ( 1, 3 ), //First Name
             ( 1, 4 ), //Surname
 
         };
-        #endregion
+		#endregion
 
-        //DbController.PopulateTable() SqlQuery Strings & GETTER Method.
-        #region
-        public static (string, List<string>) GetNewTableQueryStringAndEnum(string table)
+		//DbController.PopulateTable() SqlQuery Strings & GETTER Method.
+		#region
+		public static (string, List<string>) GetNewTableQueryStringAndEnum(string table)
         {
             string QueryString = "";
             List<string> stringsFromEnum = new List<string>();

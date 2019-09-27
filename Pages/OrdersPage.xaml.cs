@@ -155,8 +155,8 @@ namespace InterventionalCostings.Pages
         private void SendEmail(string emailBody, string password)
         {
 
-            string userName = DBController.GetEmailAddressFromUserName(Environment.UserName);
-            string OrdererEmailAddress = DBController.GetEmailAddressFromUserName(Environment.UserName);
+            //string userName = DBController.GetEmailAddressFromUserName(Environment.UserName);
+			string OrdererEmailAddress = Properties.mySettings.Default.OrdererEmail;
 
             //Debugging
             //MessageBox.Show("Environment.Username is: " + Environment.UserName);
@@ -164,7 +164,7 @@ namespace InterventionalCostings.Pages
 
             // Create instance of IEWSClient class by giving credentials
             ExchangeService service = new ExchangeService(ExchangeVersion.Exchange2010);
-            service.Credentials = new WebCredentials(userName, password);
+            service.Credentials = new WebCredentials(OrdererEmailAddress, password);
             service.Url = new Uri("https://mail.nhs.net/ews/exchange.asmx");
             ServicePointManager.ServerCertificateValidationCallback = CertificateValidationCallBack;
 
@@ -176,7 +176,17 @@ namespace InterventionalCostings.Pages
 
             email.Subject = "**TEST** Interventional Order Request";
             email.Body = new MessageBody(emailBody);
-            email.Send();
+
+			try
+			{
+				email.Send();
+			}
+			catch (Exception)
+			{
+				MessageBox.Show(@"Error - Could not send. Is the password correct?");
+			}
+
+
         }
 
         private string getUserPassword()

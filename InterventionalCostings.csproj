@@ -164,10 +164,10 @@
     </Compile>
     <Compile Include="Other Classes\Radiologist.cs" />
     <Compile Include="Other Classes\Referrer.cs" />
-    <Compile Include="Settings.Designer.cs">
+    <Compile Include="Properties\mySettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
+      <DependentUpon>mySettings.settings</DependentUpon>
     </Compile>
     <Compile Include="Static Data\ExcelStaticData.cs" />
     <Compile Include="Static Data\StaticData.cs" />
@@ -331,9 +331,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Settings.settings">
+    <None Include="Properties\mySettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <LastGenOutput>mySettings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
