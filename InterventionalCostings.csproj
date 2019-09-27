@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2A9672F-DD48-489A-B044-2EAEF9A6AE50}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>InterventionalCostings</RootNamespace>
+    <AssemblyName>InterventionalCostings</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Exchange.WebServices, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>.\packages\Exchange.WebServices.Managed.Api.2.2.1.1\lib\net35\Microsoft.Exchange.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>.\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>.\packages\MicrosoftOfficeCore.15.0.0\lib\net35\Office.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OxyPlot, Version=1.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
+      <HintPath>.\packages\OxyPlot.Core.1.0.0\lib\net45\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Wpf, Version=1.0.0.0, Culture=neutral, PublicKeyToken=75e952ba404cdbb0, processorArchitecture=MSIL">
+      <HintPath>.\packages\OxyPlot.Wpf.1.0.0\lib\net45\OxyPlot.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>.\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=1.4.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>.\packages\WpfAnimatedGif.1.4.17\lib\net\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Controllers\SaveCaseController.cs" />
+    <Compile Include="CustomViews\CustomItemToOrder.xaml.cs">
+      <DependentUpon>CustomItemToOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\CustomTitleBar.xaml.cs">
+      <DependentUpon>CustomTitleBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\EmailSend.xaml.cs">
+      <DependentUpon>EmailSend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\Footer.xaml.cs">
+      <DependentUpon>Footer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\GetUserPassword.xaml.cs">
+      <DependentUpon>GetUserPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\ProgressBarWindow.xaml.cs">
+      <DependentUpon>ProgressBarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\SettingsWindow.xaml.cs">
+      <DependentUpon>SettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\SyncExcelToDb.xaml.cs">
+      <DependentUpon>SyncExcelToDb.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Item Classes\BaseInventoryItem.cs" />
+    <Compile Include="Inventory Item Classes\Case.cs" />
+    <Compile Include="InventoryDataSet.cs">
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Other Classes\CaseItemCountHistoryStatsData.cs" />
+    <Compile Include="Other Classes\CaseStatsData.cs" />
+    <Compile Include="Inventory Item Classes\Catheter.cs" />
+    <Compile Include="Inventory Item Classes\Contrast.cs" />
+    <Compile Include="CustomViews\CustomItemToOrderImageWindow.xaml.cs">
+      <DependentUpon>CustomItemToOrderImageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Item Classes\Dilator.cs" />
+    <Compile Include="Inventory Item Classes\Dressing.cs" />
+    <Compile Include="Inventory Item Classes\EmbolisationSystem.cs" />
+    <Compile Include="Other Classes\ItemToOrder.cs" />
+    <Compile Include="Inventory Item Classes\MiscItem.cs" />
+    <Compile Include="CustomViews\SelectedItemImageWindow.xaml.cs">
+      <DependentUpon>SelectedItemImageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Item Classes\Sheath.cs" />
+    <Compile Include="Inventory Item Classes\Snare.cs" />
+    <Compile Include="Other Classes\IrNurse.cs" />
+    <Compile Include="Pages\OrdersPage.xaml.cs">
+      <DependentUpon>OrdersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\SyncDbToExcel.xaml.cs">
+      <DependentUpon>SyncDbToExcel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReportsPage.xaml.cs">
+      <DependentUpon>ReportsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Other Classes\Radiologist.cs" />
+    <Compile Include="Other Classes\Referrer.cs" />
+    <Compile Include="Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Static Data\ExcelStaticData.cs" />
+    <Compile Include="Static Data\StaticData.cs" />
+    <Compile Include="Pages\StartPage.xaml.cs">
+      <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CustomViews\CustomTitleBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomViews\EmailSend.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomViews\Footer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomViews\GetUserPassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomViews\InventoryItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomViews\CustomItemToOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomViews\ProgressBarWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomViews\SelectedItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomViews\SettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomViews\SyncExcelToDb.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomViews\CustomItemToOrderImageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomViews\SelectedItemImageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\DBController.cs" />
+    <Compile Include="Controllers\EmailController.cs" />
+    <Compile Include="Controllers\PrintController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="CustomViews\SelectedItem.xaml.cs">
+      <DependentUpon>SelectedItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Item Classes\Balloon.cs" />
+    <Compile Include="Inventory Item Classes\EmbolisationCoil.cs" />
+    <Compile Include="Inventory Item Classes\GuideWire.cs" />
+    <Compile Include="Inventory Item Classes\Stent.cs" />
+    <Compile Include="CustomViews\InventoryItem.xaml.cs">
+      <DependentUpon>InventoryItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\NewCasePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\OrdersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomViews\InventoryItemImageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomViews\SyncDbToExcel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ReportsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\StartPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pages\NewCasePage.xaml.cs">
+      <DependentUpon>NewCasePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\InventoryItemImageWindow.xaml.cs">
+      <DependentUpon>InventoryItemImageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFiles\MasterCase.xlsx" />
+    <EmbeddedResource Include="MasterFiles\Balloons.xlsx" />
+    <EmbeddedResource Include="MasterFiles\Catheters.xlsx" />
+    <EmbeddedResource Include="MasterFiles\Coils.xlsx" />
+    <EmbeddedResource Include="MasterFiles\Contrast.xlsx" />
+    <EmbeddedResource Include="MasterFiles\Dilators.xlsx" />
+    <EmbeddedResource Include="MasterFiles\Dressings.xlsx" />
+    <EmbeddedResource Include="MasterFiles\EmbolisationSystems.xlsx" />
+    <EmbeddedResource Include="MasterFiles\Misc.xlsx" />
+    <EmbeddedResource Include="MasterFiles\Radiologists.xlsx" />
+    <EmbeddedResource Include="MasterFiles\Referrers.xlsx" />
+    <EmbeddedResource Include="MasterFiles\Sheaths.xlsx" />
+    <EmbeddedResource Include="MasterFiles\Snares.xlsx" />
+    <EmbeddedResource Include="MasterFiles\Stents.xlsx" />
+    <EmbeddedResource Include="MasterFiles\Wires.xlsx" />
+    <EmbeddedResource Include="MasterFiles\MiscData.xlsx" />
+    <EmbeddedResource Include="MasterFiles\InterventionalNurses.xlsx" />
+    <None Include="InventoryDataSet.xsc">
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventoryDataSet.xss">
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\imagePlaceholder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Databases\" />
+    <Folder Include="ExcelFiles\" />
+    <Folder Include="Images\ErrorImages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TrashCan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GreenTick.png" />
+    <Resource Include="Images\RedCross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bg4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\emailSendBusy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\dbToExcel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\excelToDb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\addItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\statsAndReports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\newCase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\orderSomeStuff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Banners\heartBeatFlatLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Banners\heartBeatFlatSquiggle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Banners\blueBanner2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\addButton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\minusButton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\deleteButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\greenButton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SplashScreens\splashScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\blueButton3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cameraButton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Inventory.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inventory_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Inventory.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

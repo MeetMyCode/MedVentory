@@ -1,0 +1,79 @@
+﻿<Window x:Class="InterventionalCostings.CustomViews.SyncDbToExcel"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InterventionalCostings.Pages"
+      mc:Ignorable="d" 
+      SizeToContent="WidthAndHeight"
+      WindowStartupLocation="CenterScreen"
+      Title="SyncExcelToDB"
+      WindowStyle="None">
+
+    <Window.Background>
+        <VisualBrush TileMode="Tile" Viewport="0,0,1,1">
+            <VisualBrush.Visual>
+                <Image Source="/Images/bg4.jpg"/>
+            </VisualBrush.Visual>
+        </VisualBrush>
+    </Window.Background>
+
+    <Grid x:Name="MainGrid">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+
+        <StackPanel Grid.Row="1" Orientation="Vertical"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    Height="auto" Margin="10,0,10,10">
+
+                <Label Content="What would you like to sync?"
+                       Margin="0,10,0,0"/>
+
+                <ComboBox x:Name="SyncComboBox" 
+                          Margin="0,0,0,20"/>
+
+                <StackPanel x:Name="ProgressStackPanel" 
+                            Orientation="Vertical"
+                            HorizontalAlignment="Stretch">
+
+                    <Label x:Name="CurrentTask" 
+                           Content="CurrentTask..."
+                           Height="30"
+                           HorizontalAlignment="Stretch"/>
+
+                    <ProgressBar x:Name="SyncProgressBar" 
+                                 Height="30"
+                                 HorizontalAlignment="Stretch"/>
+
+                    <Label x:Name="TaskDetails" 
+                           Content="Task Details..."
+                           Height="30"
+                           HorizontalAlignment="Stretch"/>
+                </StackPanel>
+
+                <DockPanel LastChildFill="False">
+                    <Button x:Name="SyncButton"
+                        DockPanel.Dock="Right" 
+                            Content="Sync Now!"
+                            Width="100"
+                            Height="30"
+                            Margin="20,0,0,0" Click="SyncNowButtonClicked"/>
+
+                    <Button x:Name="SyncCancelButton"
+                        DockPanel.Dock="Right" 
+                            Content="Close"
+                            Width="100"
+                            Height="30" Click="SyncCancelButtonClicked"/>
+                </DockPanel>
+            </StackPanel>
+
+
+
+
+    </Grid>
+</Window>

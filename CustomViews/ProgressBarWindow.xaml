@@ -1,0 +1,51 @@
+﻿<Window x:Class="InterventionalCostings.CustomViews.ProgressBarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InterventionalCostings.CustomViews"
+        mc:Ignorable="d"
+        Title="ProgressBarWindow"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        SizeToContent="WidthAndHeight">
+
+
+    <Window.Background>
+        <VisualBrush TileMode="Tile" Viewport="0,0,1,1">
+            <VisualBrush.Visual>
+                <Image Source="/Images/SplashScreens/splashScreen.png"/>
+            </VisualBrush.Visual>
+        </VisualBrush>
+    </Window.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.67*"/>
+        </Grid.ColumnDefinitions>
+        
+        
+        <StackPanel Orientation="Vertical" Margin="568,396,10,67">
+
+            <Label x:Name="CurrentTask" Content="Current Task..." 
+                   HorizontalAlignment="Stretch"
+                   Height="30"/>
+
+            <ProgressBar x:Name="TaskProgressBar" 
+                         HorizontalAlignment="Stretch"
+                         Height="10" Width="Auto"/>
+
+            <Label x:Name="TaskDetails" Content="Task Details..." 
+                   HorizontalAlignment="Stretch"
+                   Height="30"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

@@ -1,0 +1,224 @@
+﻿<Page x:Class="InterventionalCostings.Pages.ReportsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:oxy="http://oxyplot.org/wpf" 
+      xmlns:local ="clr-namespace:InterventionalCostings.Pages"
+      mc:Ignorable="d" 
+      HorizontalAlignment="Stretch"
+      VerticalAlignment="Stretch"
+      Title="ReportsPage">
+
+    <!--
+    <Page.DataContext>
+        <local:ReportsPage/>
+    </Page.DataContext>
+    -->
+
+    <Page.Background>
+        <VisualBrush TileMode="Tile" Viewport="0,0,1,1">
+            <VisualBrush.Visual>
+                <Image Source="/Images/bg4.jpg"/>
+            </VisualBrush.Visual>
+        </VisualBrush>
+    </Page.Background>
+
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Grid.Column="0" Header="Quick Stats" Margin="30,10,0,10" Width="auto" Height="auto">
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel x:Name="QuickStatsStack" Orientation="Vertical">
+
+                        <DockPanel LastChildFill="True" Height="auto">
+                            <Label DockPanel.Dock="Left" Content="Total Cases So Far:" Margin="10,10,0,0"/>
+                            <Label x:Name="TotalCaseCount" DockPanel.Dock="Right" Content="?" HorizontalContentAlignment="Right" Margin="30,10,30,0"/>
+                        </DockPanel>
+
+                        <DockPanel LastChildFill="True" Height="auto">
+                            <Label DockPanel.Dock="Left" Content="Total Cost Of All Cases So Far:" Margin="10,10,0,0"/>
+                            <Label x:Name="TotalMoneySpentSoFar" DockPanel.Dock="Right" Content="?" HorizontalContentAlignment="Right" Margin="30,10,30,0"/>
+                        </DockPanel>
+
+                        <DockPanel LastChildFill="True" Height="auto">
+                            <Label DockPanel.Dock="Left" Content="Least Expensive Case So Far:" Margin="10,10,0,0"/>
+                            <Label x:Name="LeastExpensiveCase" DockPanel.Dock="Right" Content="?" HorizontalContentAlignment="Right" Margin="30,10,30,0"/>
+                        </DockPanel>
+
+                        <DockPanel LastChildFill="True" Height="auto">
+                            <Label DockPanel.Dock="Left" Content="Most Expensive Case So Far:" Margin="10,10,0,0"/>
+                            <Label x:Name="MostExpensiveCase" DockPanel.Dock="Right" Content="?" HorizontalContentAlignment="Right" Margin="30,10,30,0"/>
+                        </DockPanel>
+
+                        <DockPanel LastChildFill="True" Height="auto">
+                            <Label DockPanel.Dock="Left" Content="Average Weekly Case Count/Cost:" Margin="10,10,0,0"/>
+                            <Label x:Name="AvgWeeklyCaseCountCost" DockPanel.Dock="Right" Content="?/?" HorizontalContentAlignment="Right" Margin="30,10,30,0"/>
+                        </DockPanel>
+
+                        <DockPanel LastChildFill="True" Height="auto">
+                            <Label DockPanel.Dock="Left" Content="Average Monthly Case Count/Cost:" Margin="10,10,0,0"/>
+                            <Label x:Name="AvgMonthlyCaseCountCost" DockPanel.Dock="Right" Content="?/?" HorizontalContentAlignment="Right" Margin="30,10,30,0"/>
+                        </DockPanel>
+
+                        <DockPanel LastChildFill="True" Height="auto">
+                            <Label DockPanel.Dock="Left" Content="Average Annual Case Count/Cost:" Margin="10,10,0,0"/>
+                            <Label x:Name="AvgYearlyCaseCountCost" DockPanel.Dock="Right" Content="?/?" HorizontalContentAlignment="Right" Margin="30,10,30,0"/>
+                        </DockPanel>
+
+                        <DockPanel LastChildFill="true" Height="auto">
+
+                            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" Content="Most Used Product(s) &amp; Cost:" Margin="10,10,0,0"/>
+                            </StackPanel>
+
+                            <Border BorderThickness="1" BorderBrush="Black" Margin="20,0,10,0">
+                                <StackPanel x:Name="MostUsedItemsStack" Orientation="Vertical"></StackPanel>
+                            </Border>
+
+                        </DockPanel>
+
+                        <DockPanel LastChildFill="True" Height="auto">
+                            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" Content="Least Used Product(s) &amp; Cost:" Margin="10,10,0,0"/>
+                            </StackPanel>
+
+                            <Border BorderThickness="1" BorderBrush="Black" Margin="20,0,10,0">
+                                <StackPanel x:Name="LeaststUsedItemsStack" Orientation="Vertical"></StackPanel>
+                            </Border>
+                        </DockPanel>
+
+                    </StackPanel>
+
+
+                </ScrollViewer>
+            </GroupBox>
+
+
+            <GroupBox Grid.Column="1" Header="Graphs &amp; Trends" Margin="30,10,30,10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel x:Name="ChartSettings" Orientation="Horizontal" Grid.Row="0">
+
+                        <StackPanel Orientation="Vertical" Width="auto" Margin="10,0,0,0">
+                            <Label Content="Graph Type:" Height="auto" Padding="0,0,0,0" Margin="0,5,0,2"/>
+                            <ComboBox x:Name="chartTypeComboBox" Width="150" HorizontalAlignment="Left" 
+                                      Margin="0,0,0,0" Height="35" SelectionChanged="ChartTypeSelected">
+                                <ComboBox.Background>
+                                    <ImageBrush ImageSource="/Images/Banners/blueBanner2.png" Opacity="0.6"/>
+                                </ComboBox.Background>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Width="auto" Margin="10,0,0,0">
+                            <Label Content="Y-Axis Data:" Height="auto" Padding="0,0,0,0" Margin="0,5,0,2"/>
+                            <ComboBox x:Name="YAxisComboBox" Width="150" Height="35" HorizontalAlignment="Left" Margin="0,0,0,0">
+                                <ComboBox.Background>
+                                    <ImageBrush ImageSource="/Images/Banners/blueBanner2.png" Opacity="0.6"/>
+                                </ComboBox.Background>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Width="auto" Margin="10,0,0,0">
+                            <Label Content="X-Axis Data:" Height="auto" Padding="0,0,0,0" Margin="0,5,0,2"/>
+                            <ComboBox x:Name="XAxisComboBox" Width="150" Height="35" HorizontalAlignment="Left" Margin="0,0,0,0" 
+                                      SelectionChanged="PopulateSelectedYearComboBox">
+                                <ComboBox.Background>
+                                    <ImageBrush ImageSource="/Images/Banners/blueBanner2.png" Opacity="0.6"/>
+                                </ComboBox.Background>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Width="auto" Margin="10,0,0,0">
+                            <Label Content="For Year:" Height="auto" Padding="0,0,0,0" Margin="0,5,0,2"/>
+                            <ComboBox x:Name="SelectedYearComboBox" Width="150" HorizontalAlignment="Left" 
+                                      Margin="0,0,0,0" Height="35" SelectionChanged="YearSelected">
+                                <ComboBox.Background>
+                                    <ImageBrush ImageSource="/Images/Banners/blueBanner2.png" Opacity="0.6"/>
+                                </ComboBox.Background>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <Button x:Name="GoGraphButton" Width="40" Height="auto" VerticalAlignment="Center" 
+                                Margin="10,5,10,0" Click="LoadGraph">
+
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0" Opacity="0.7">
+                                    <GradientStop Color="#FFF3F3F3"/>
+                                    <GradientStop Color="#FFEBEBEB" Offset="0.347"/>
+                                    <GradientStop Color="#FFDDDDDD" Offset="0.261"/>
+                                    <GradientStop Color="#FF3F72E0" Offset="0.935"/>
+                                    <GradientStop Color="#FF99B1E5" Offset="0.034"/>
+                                    <GradientStop Color="#FFADBFE7" Offset="0.574"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+
+                            <Image Source="/Images/Go.png" Margin="0,0,0,0" HorizontalAlignment="Stretch" 
+                                   VerticalAlignment="Stretch"/>
+
+                        </Button>
+
+                    </StackPanel>
+
+
+
+                    <oxy:PlotView x:Name="GraphView" Grid.Row="1" Model="{Binding MyGraph, UpdateSourceTrigger=PropertyChanged}" 
+                                  Margin="10,0,10,10" Background="{x:Null}"/>
+
+
+
+
+
+
+
+                </Grid>
+
+            </GroupBox>
+
+
+        </Grid>
+
+
+        <DockPanel Grid.Row="2" LastChildFill="False">
+            <Button Click="CloseGraphsAndTrends" DockPanel.Dock="Right" Margin="0,0,30,10" 
+                    Height="auto" Width="auto">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0" Opacity="0.7">
+                        <GradientStop Color="#FFF3F3F3"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.347"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.261"/>
+                        <GradientStop Color="#FF3F72E0" Offset="0.935"/>
+                        <GradientStop Color="#FF99B1E5" Offset="0.034"/>
+                        <GradientStop Color="#FFADBFE7" Offset="0.574"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+
+                <StackPanel Orientation="Vertical" Height="auto" Width="auto">
+                    <Image Source="/Images/exit.png"
+                            Margin="5,5,5,0" Width="30" Height="auto"/>
+                    <Label Content="Exit" HorizontalContentAlignment="Center" Padding="0,0,0,0" Margin="0,0,0,0" 
+                           FontFamily="Arial" FontWeight="Bold" FontSize="12"/>
+                </StackPanel>
+
+            </Button>
+        </DockPanel>
+
+
+
+    </Grid>
+</Page>

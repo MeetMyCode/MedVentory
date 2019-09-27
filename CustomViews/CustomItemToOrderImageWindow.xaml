@@ -1,0 +1,16 @@
+﻿<Window x:Class="InterventionalCostings.Inventory_Item_Classes.CustomItemToOrderImageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InterventionalCostings"
+        mc:Ignorable="d"
+        Title="ProductImageWindow"
+        MinHeight="500" MinWidth="500" 
+        MaxHeight="500" MaxWidth="500" 
+        MouseDown="Close"
+        WindowStyle="None">
+    <Border Background="Black">
+        <Image x:Name="ProductImage"/>
+    </Border>
+</Window>

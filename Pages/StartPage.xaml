@@ -1,0 +1,173 @@
+﻿<Page x:Class="InterventionalCostings.Pages.StartPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      VerticalAlignment="Stretch"
+      HorizontalAlignment="Stretch" Loaded="OnPageLoad">
+    
+    <Page.Background>
+        <ImageBrush ImageSource="/Images/bg4.jpg"/>
+    </Page.Background>
+
+    <Grid HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <WrapPanel Grid.Row="1" Margin="200,0,200,0" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center">
+
+            <Button Click="Settings_Click" HorizontalAlignment="Left" Margin="30,15,0,30" VerticalAlignment="Center" Height="auto">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.347"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.261"/>
+                        <GradientStop Color="#FF3F72E0" Offset="0.935"/>
+                        <GradientStop Color="#FF99B1E5" Offset="0.034"/>
+                        <GradientStop Color="#FFADBFE7" Offset="0.574"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+
+
+                <StackPanel Orientation="Vertical" Height="auto">
+                    <Image Source="/Images/settings.png"
+                            Margin="0,0,0,0" Width="200" Height="200"/>
+                    <Label Content="Settings" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
+                </StackPanel>
+            </Button>
+
+            <Button Click="NewCase_Click" HorizontalAlignment="Left" Margin="30,15,0,30" VerticalAlignment="Center" Height="auto">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.347"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.261"/>
+                        <GradientStop Color="#FF3F72E0" Offset="0.935"/>
+                        <GradientStop Color="#FF99B1E5" Offset="0.034"/>
+                        <GradientStop Color="#FFADBFE7" Offset="0.574"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+
+
+                <StackPanel Orientation="Vertical" Height="auto">
+                    <Image Source="/Images/newCase.png"
+                            Margin="0,0,0,0" Width="200" Height="200"/>
+                    <Label Content="New Case" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
+                </StackPanel>
+            </Button>
+
+            <Button Click="GoToOrdersPage" HorizontalAlignment="Left" Margin="30,15,0,30" 
+                    VerticalAlignment="Center" Height="auto" Padding="5,5,5,5">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.347"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.261"/>
+                        <GradientStop Color="#FF3F72E0" Offset="0.935"/>
+                        <GradientStop Color="#FF99B1E5" Offset="0.034"/>
+                        <GradientStop Color="#FFADBFE7" Offset="0.574"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+
+
+                <StackPanel Orientation="Vertical" Height="auto">
+                    <Image Source="/Images/orderSomeStuff.png"
+                            Margin="0,0,0,0" Width="200" Height="200"/>
+                    <Label Content="Request an Order" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
+                </StackPanel>
+            </Button>
+
+            <Button Click="GoToDbToExcelSyncWindow" HorizontalAlignment="Left" Margin="30,15,0,30" 
+                    VerticalAlignment="Center" Height="auto" Padding="5,5,5,5">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.347"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.261"/>
+                        <GradientStop Color="#FF3F72E0" Offset="0.935"/>
+                        <GradientStop Color="#FF99B1E5" Offset="0.034"/>
+                        <GradientStop Color="#FFADBFE7" Offset="0.574"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+
+
+                <StackPanel Orientation="Vertical" Height="auto">
+                    <Image Source="/Images/dbToExcel.png"
+                            Margin="0,0,0,0" Width="200" Height="200"/>
+                    <Label Content="Sync Database > Excel" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
+                </StackPanel>
+            </Button>
+
+            <Button Click="GoToExcelToDbSyncWindow" HorizontalAlignment="Left" Margin="30,15,0,30" 
+                    VerticalAlignment="Center" Height="auto" Padding="5,5,5,5">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.347"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.261"/>
+                        <GradientStop Color="#FF3F72E0" Offset="0.935"/>
+                        <GradientStop Color="#FF99B1E5" Offset="0.034"/>
+                        <GradientStop Color="#FFADBFE7" Offset="0.574"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+
+
+                <StackPanel Orientation="Vertical" Height="auto">
+                    <Image Source="/Images/excelToDb.png"
+                            Margin="0,0,0,0" Width="200" Height="200"/>
+                    <Label Content="Sync Excel > Database" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
+                </StackPanel>
+            </Button>
+
+            <Button Click="GoToReportsPage" HorizontalAlignment="Left" Margin="30,15,0,30" VerticalAlignment="Center" 
+                    Height="auto" Padding="5,5,5,5">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.347"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.261"/>
+                        <GradientStop Color="#FF3F72E0" Offset="0.935"/>
+                        <GradientStop Color="#FF99B1E5" Offset="0.034"/>
+                        <GradientStop Color="#FFADBFE7" Offset="0.574"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+
+
+                <StackPanel Orientation="Vertical" Height="auto">
+                    <Image Source="/Images/statsAndReports.png"
+                            Margin="0,0,0,0" Width="200" Height="200"/>
+                    <Label Content="Stats &amp; Reports" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
+                </StackPanel>
+            </Button>
+
+            <Button Click="ExitApplication" HorizontalAlignment="Left" Margin="30,15,0,30" 
+                    VerticalAlignment="Center" Height="auto" Padding="5,5,5,5">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.347"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.261"/>
+                        <GradientStop Color="#FF3F72E0" Offset="0.935"/>
+                        <GradientStop Color="#FF99B1E5" Offset="0.034"/>
+                        <GradientStop Color="#FFADBFE7" Offset="0.574"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+
+
+                <StackPanel Orientation="Vertical" Height="auto">
+                    <Image Source="/Images/exit.png"
+                            Margin="0,0,0,0" Width="200" Height="200"/>
+                    <Label Content="Exit Application" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontFamily="Arial" FontWeight="Bold" FontSize="22"/>
+                </StackPanel>
+            </Button>
+
+        </WrapPanel>
+
+
+    </Grid>
+</Page>

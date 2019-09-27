@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="InterventionalCostings" GeneratedClassName="Settings1">
+  <Profiles />
+  <Settings>
+    <Setting Name="OrdererEmail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ross.higgins@nhs.net</Value>
+    </Setting>
+    <Setting Name="SmtpServerAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SEND.NHS.NET</Value>
+    </Setting>
+    <Setting Name="SmtpServerPortNumber" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">587</Value>
+    </Setting>
+    <Setting Name="ImapServerAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">IMAP.NHS.NET</Value>
+    </Setting>
+    <Setting Name="ImapServerPortNumber" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">993</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
