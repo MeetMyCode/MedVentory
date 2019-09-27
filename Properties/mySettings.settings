@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="OrdererEmail" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ross.higgins@nhs.net</Value>
+      <Value Profile="(Default)">someone@nhs.net</Value>
     </Setting>
     <Setting Name="SmtpServerAddress" Type="System.String" Scope="User">
       <Value Profile="(Default)">SEND.NHS.NET</Value>
