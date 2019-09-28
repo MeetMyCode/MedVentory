@@ -335,6 +335,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>mySettings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -434,6 +435,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\settings.png" />
+    <Resource Include="Images\SS_NewCase.png" />
+    <Resource Include="Images\SS_Orders.png" />
+    <Resource Include="Images\SS_StartScreen.png" />
+    <Resource Include="Images\SS_Stats.png" />
+    <Resource Include="Images\SS_Sync.png" />
     <Content Include="Inventory.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

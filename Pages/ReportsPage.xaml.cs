@@ -146,13 +146,14 @@ namespace InterventionalCostings.Pages
 				//Create a list of items and a list of quantites used corresponding to each item in the items list.
 				List<string> items = new List<string>();
 				List<int> quantityUsed = new List<int>();
-				int index = 0;
+				//int index = 0;
+
 				foreach (CaseItemCountHistoryStatsData item in caseItemCountHistoryStats)
 				{
 					//If item already in list, increment quantity.
 					if (items.Contains(item.ItemDescription))
 					{
-						quantityUsed[index] += item.QuantityUsed;
+						quantityUsed[items.IndexOf(item.ItemDescription)] += item.QuantityUsed;
 					}
 					else
 					{
@@ -161,7 +162,7 @@ namespace InterventionalCostings.Pages
 						quantityUsed.Add(item.QuantityUsed);
 					}
 
-					index++;
+					//index++;
 				}
 
 				int mostUsedProductCount = quantityUsed.Max();

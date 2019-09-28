@@ -2,10 +2,6 @@
 
 # STATUS: INCOMPLETE.
 
-# TODO
-
-1. Make GUI for settings.
-
 # About
 <p>Originally made for stock control and data management of Interventional Radiology procedures. This could be also be modified/used in 
 other areas where stock control and "case" management are required.</p>
@@ -19,7 +15,7 @@ other areas where stock control and "case" management are required.</p>
 # Important file locations
 /Databases - This is where the database file is - Inventory.mdf.
 
-/StaticData - Seperate files are here for any data that the application required that does not change e.g. Excel file cell locations, column headings, email settings etc.
+/StaticData - Seperate files are here for any data that the application required that does not change e.g. Excel file cell locations, column headings etc.
 
 /ExcelFiles - Contains the Excel Files that form the basis of all data used within the application.
 
@@ -39,3 +35,11 @@ other areas where stock control and "case" management are required.</p>
 
 <p>When you save a case, this information is saved to an Excel file in a 'Saved Cases' folder, created when the first case is saved.</p>
 <p>When data is synced from database tables to Excel files, these files are placed in a folder called 'ExcelFiles', created upon first syncing.</p>
+
+# Screenshots
+<img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SplashScreens/SS_StartScreen.png"/>
+<img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SplashScreens/SS_NewCase.png"/>
+<img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SplashScreens/SS_Orders.png"/>
+<img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SplashScreens/SS_Sync.png"/>
+<img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SplashScreens/SS_Stats.png"/>
+

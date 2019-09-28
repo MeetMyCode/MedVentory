@@ -73,7 +73,7 @@
             <StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 
-                        <Button x:Name="MarkAsOrdered" Content="Email List to Ross!" Height="50" Width="200" 
+                        <Button x:Name="MarkAsOrdered" Content="Email to Someone!" Height="50" Width="200" 
                             VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" 
                             Click="ClearOrdersConfirmation" Margin="0,0,100,0">
                         
