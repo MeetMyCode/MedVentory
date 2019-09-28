@@ -37,9 +37,9 @@ other areas where stock control and "case" management are required.</p>
 <p>When data is synced from database tables to Excel files, these files are placed in a folder called 'ExcelFiles', created upon first syncing.</p>
 
 # Screenshots
-<img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SplashScreens/SS_StartScreen.png"/>
-<img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SplashScreens/SS_NewCase.png"/>
-<img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SplashScreens/SS_Orders.png"/>
-<img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SplashScreens/SS_Sync.png"/>
-<img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SplashScreens/SS_Stats.png"/>
+<img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SS_StartScreen.png"/>
+<img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SS_NewCase.png"/>
+<img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SS_Orders.png"/>
+<img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SS_Sync.png"/>
+<img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SS_Stats.png"/>
 
