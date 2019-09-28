@@ -67,7 +67,7 @@ namespace InterventionalCostings.CustomViews
             SyncComboBox.Text = SyncComboBox.Items[0].ToString();
 
             CustomTitleBar titleBar = new CustomTitleBar();
-            titleBar.TitleBarTitleText.Content = "Sync Database to Excel Files(s)";
+            titleBar.TitleBarTitleText.Content = "Sync Database to Excel File(s)";
             MainGrid.Children.Add(titleBar);
 
         }
