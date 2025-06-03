@@ -1,11 +1,5 @@
 <img src="https://github.com/MeetMyCode/MedVentory/blob/master/Images/SplashScreens/splashScreen.png"/>
 
-# STATUS: INCOMPLETE.
-
-# TODO:
-<p>Graphs and Trends not finished yet.</p>
-<p>Usage section below not finished yet.</p>
-
 # About
 <p>Originally made for stock control and data management of Interventional Radiology procedures. This could be also be modified/used in 
 other areas where stock control and "case" management are required.</p>
