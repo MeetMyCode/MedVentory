@@ -1246,6 +1246,11 @@ namespace InterventionalCostings.Static_Data
             return ListOfCaseStatsData;
         }
 
+        public static List<Referrer> GetListOfReferrers()
+        {
+            return Referrers;
+        }
+
         public static List<CaseItemCountHistoryStatsData> GetListOfCaseItemCountHistoryStatsData()
         {
             return ListOfCaseItemCountHistoryStatsData;

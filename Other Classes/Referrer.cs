@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterventionalCostings
 {
-    class Referrer
+    public class Referrer
     {
         public int Id { get; set; }
         public string Prefix { get; set; }

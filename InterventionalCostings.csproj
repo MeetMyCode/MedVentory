@@ -8,12 +8,13 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>InterventionalCostings</RootNamespace>
     <AssemblyName>InterventionalCostings</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -125,6 +126,9 @@
     <Compile Include="CustomViews\SyncExcelToDb.xaml.cs">
       <DependentUpon>SyncExcelToDb.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomViews\ReferrerPicker.xaml.cs">
+      <DependentUpon>ReferrerPicker.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Inventory Item Classes\BaseInventoryItem.cs" />
     <Compile Include="Inventory Item Classes\Case.cs" />
     <Compile Include="InventoryDataSet.cs">
@@ -222,6 +226,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CustomViews\ReferrerPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -315,6 +323,38 @@
     <EmbeddedResource Include="MasterFiles\Wires.xlsx" />
     <EmbeddedResource Include="MasterFiles\MiscData.xlsx" />
     <EmbeddedResource Include="MasterFiles\InterventionalNurses.xlsx" />
+    <None Include="Dummy Data\Balloons.xlsx" />
+    <None Include="Dummy Data\Catheters.xlsx" />
+    <None Include="Dummy Data\Coils.xlsx" />
+    <None Include="Dummy Data\Contrast.xlsx" />
+    <None Include="Dummy Data\Dilators.xlsx" />
+    <None Include="Dummy Data\Dressings.xlsx" />
+    <None Include="Dummy Data\EmbolisationSystems.xlsx" />
+    <None Include="Dummy Data\InterventionalNurses.xlsx" />
+    <None Include="Dummy Data\Misc.xlsx" />
+    <None Include="Dummy Data\MiscData.xlsx" />
+    <None Include="Dummy Data\Radiologists.xlsx" />
+    <None Include="Dummy Data\Referrers.xlsx" />
+    <None Include="Dummy Data\Sheaths.xlsx" />
+    <None Include="Dummy Data\Snares.xlsx" />
+    <None Include="Dummy Data\Stents.xlsx" />
+    <None Include="Dummy Data\Wires.xlsx" />
+    <None Include="ExcelFiles\Balloons.xlsx" />
+    <None Include="ExcelFiles\Catheters.xlsx" />
+    <None Include="ExcelFiles\Coils.xlsx" />
+    <None Include="ExcelFiles\Contrast.xlsx" />
+    <None Include="ExcelFiles\Dilators.xlsx" />
+    <None Include="ExcelFiles\Dressings.xlsx" />
+    <None Include="ExcelFiles\EmbolisationSystems.xlsx" />
+    <None Include="ExcelFiles\InterventionalNurses.xlsx" />
+    <None Include="ExcelFiles\Misc.xlsx" />
+    <None Include="ExcelFiles\MiscData.xlsx" />
+    <None Include="ExcelFiles\Radiologists.xlsx" />
+    <None Include="ExcelFiles\Referrers.xlsx" />
+    <None Include="ExcelFiles\Sheaths.xlsx" />
+    <None Include="ExcelFiles\Snares.xlsx" />
+    <None Include="ExcelFiles\Stents.xlsx" />
+    <None Include="ExcelFiles\Wires.xlsx" />
     <None Include="InventoryDataSet.xsc">
       <DependentUpon>InventoryDataSet.xsd</DependentUpon>
     </None>
@@ -356,8 +396,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Databases\" />
-    <Folder Include="ExcelFiles\" />
     <Folder Include="Images\ErrorImages\" />
   </ItemGroup>
   <ItemGroup>
@@ -440,6 +478,13 @@
     <Resource Include="Images\SS_StartScreen.png" />
     <Resource Include="Images\SS_Stats.png" />
     <Resource Include="Images\SS_Sync.png" />
+    <Content Include="Databases\Inventory.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Databases\Inventory_log.ldf">
+      <DependentUpon>Inventory.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Inventory.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

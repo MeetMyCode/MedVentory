@@ -1,0 +1,33 @@
+﻿<Window x:Class="InterventionalCostings.CustomViews.ReferrerPicker"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InterventionalCostings.CustomViews"
+        mc:Ignorable="d"
+        Title="ReferrerPicker" Height="450" Width="400" SizeToContent="WidthAndHeight">
+
+    <Grid>
+        <!-- Define two rows for layout -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Input filter row -->
+            <RowDefinition Height="*"/>
+            <!-- Panel for array elements -->
+        </Grid.RowDefinitions>
+
+        <!-- Filter Input (Row 1) -->
+        <Grid Grid.Row="0" Margin="10">
+            <TextBox x:Name="ReferrerFilter" Width="250" Padding="5" TextChanged="ReferrerFilter_TextChanged"/>
+            <Label Content="Filter: " Foreground="Gray"
+                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </Grid>
+
+        <!-- Panel for Array Elements (Row 2) -->
+        <ScrollViewer Grid.Row="1" Margin="10">
+            <StackPanel x:Name="ReferrerListPanel">
+                <!-- Array elements will be dynamically added here -->
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

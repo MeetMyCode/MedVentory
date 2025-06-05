@@ -68,7 +68,7 @@ namespace InterventionalCostings.Pages
             LocationBackground = procedureLocation.Background;
             RadBackground = radiologist.Background;
 
-            ItemsFilter.ItemsSource = StaticData.GetDatabaseTables();
+            ItemsFilter.ItemsSource = StaticData.GetDatabaseTables(); //Populates the ItemsFilter dropdown.
 
             PopulateLocationRadReferrerAndFilterComboBoxes();
             PopulateInventoryItemsList(ItemsFilter.SelectedItem as string);
@@ -84,9 +84,6 @@ namespace InterventionalCostings.Pages
 
 
         }
-
-
-
 
         /*
          **********************************************************************************************************************
@@ -1183,7 +1180,7 @@ namespace InterventionalCostings.Pages
             ptFirstName.Text = "";
             ptSurname.Text = "";
             ptDob.Text = "";
-            referringCons.Text = "";
+            referringCons.Content = "";
 
             caseDate.Text = "";
             caseProcedure.Text = "";
@@ -1300,7 +1297,7 @@ namespace InterventionalCostings.Pages
                 ptDob.Background = Brushes.White;
             }
 
-            if (referringCons.Text == "")
+            if (referringCons.Content == "")
             {
                 referringCons.Background = RedBackground;
                 isValid = false;
@@ -1416,7 +1413,7 @@ namespace InterventionalCostings.Pages
             string fName = ptFirstName.Text;
             string sName = ptSurname.Text;
             string dob = ptDob.Text;
-            string referrer = referringCons.Text;
+            string referrer = referringCons.Content.ToString();
             DateTime date = Convert.ToDateTime(caseDate.Text);
             string procedure = caseProcedure.Text;
             string location = procedureLocation.Text;
@@ -1483,8 +1480,20 @@ namespace InterventionalCostings.Pages
         //Open a popup window and populate it with all the referring consultant details
         private void PickReferringConsultant(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            List<Referrer> referrers = StaticData.GetListOfReferrers();
+
+            ReferrerPicker referrerPicker = new ReferrerPicker(referrers);
+
+            if (referrerPicker.ShowDialog() == true) // Wait for window to close
+            {
+                referringCons.Content = referrerPicker.SelectedReferrer;
+            }
+
         }
+
+
+
 
 
     }//END OF CLASS

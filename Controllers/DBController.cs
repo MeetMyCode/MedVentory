@@ -59,13 +59,18 @@ namespace InterventionalCostings
 
         public static string InventoryConnectionString {
             get {
-                return @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rossco\Desktop\SoftwareDevelopment\MedVentory\Inventory.mdf;Integrated Security=True;Connect Timeout=30";
+                //return @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rossco\Desktop\SoftwareDevelopment\MedVentory\Inventory.mdf;Integrated Security=True;Connect Timeout=30";
+                return @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\GITHUB REPOS\MedVentory\Databases\Inventory.mdf"";Integrated Security=True;Connect Timeout=30";
             }
         }
 
         public static string TestConnectionString
         {
-            get { return @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rossco\Desktop\SoftwareDevelopment\MedVentory\TestInventory.mdf;Integrated Security=True;Connect Timeout=30"; }
+            get { 
+
+                    //return @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rossco\Desktop\SoftwareDevelopment\MedVentory\TestInventory.mdf;Integrated Security=True;Connect Timeout=30";
+                    return @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\GITHUB REPOS\MedVentory\Databases\Inventory.mdf"";Integrated Security=True;Connect Timeout=30";
+            }
         }
 
 
@@ -1138,11 +1143,6 @@ namespace InterventionalCostings
             return ListOfCaseItemCountStatsData;
         }
 
-
-
-
-
-
         public static void AddTo_ItemsToOrder(SelectedItem item)
         {            
             using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -1314,8 +1314,6 @@ namespace InterventionalCostings
                 connection.Close();
             }
         }
-
-
 
         public static List<string> GetProcedureLocations(string sqlQuery)
         {

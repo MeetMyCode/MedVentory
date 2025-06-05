@@ -198,7 +198,7 @@
                                Width="180" 
                                Background="{Binding ElementName=ptNhsNum, Path=Background}"/>
 
-                            <TextBox Grid.Column="1" x:Name="referringCons" HorizontalAlignment="Stretch" Margin="0,0,3,0"/>
+                            <Label Grid.Column="1" x:Name="referringCons" VerticalAlignment="Center" Height="{Binding ElementName=refCons, Path=Height}"  HorizontalAlignment="Stretch" Margin="0,0,3,0" Background="White"/>
                             <Button Grid.Column="2" Name="pickAReferrerButton" 
                                     HorizontalAlignment="Stretch" 
                                     Click="PickReferringConsultant">
